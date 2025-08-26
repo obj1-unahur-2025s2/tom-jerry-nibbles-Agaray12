@@ -33,11 +33,15 @@ object tom {
         return self.getEnergia() - (distancia / 2) >= 0
     }
 
-    method cazar(raton, distancia){
+    method cazarSiPuede(raton, distancia){
         if(self.puedeCazar(distancia)){
-            self.correr(distancia)
-            self.comer(raton)
+            self.cazar(raton, distancia)
         }
+    }
+
+    method cazar(raton, distancia){
+        self.correr(distancia)
+        self.comer(raton)
     }
 }
 
